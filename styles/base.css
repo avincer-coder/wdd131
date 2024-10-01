@@ -12,7 +12,7 @@ body{
     align-items: center;
 }
 main{
-    width: 1000px;
+    max-width: 1000px;
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: 68% 30%;
