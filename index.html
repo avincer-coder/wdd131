@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles/base.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta 
+        name="description" 
+        content="WDD 131 - Dynamic Web Fundamentals. Mario Eduardo Garcia Salazar. This is the index web page used to work as a root and help accomplish the asked tasks during the Web Fundamentals course. ">
+    <meta name="author" content="Mario Eduardo Garcia Salazar">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <title>WDD 131 - Dynamic Web Fundamentals - Mario Eduardo Garcia Salazar</title>
 </head>
 <body>
-    <h1>WDD 131 - </h1>
-    <h2>wwd 3452 sdf</h2>
+    <header>
+        <h1>WDD131: Dynamic Web Fundamentals - Mario E. Garcia Salazar</h1>
+
+<!-- The navigation must employ a well designed hover affect. Use CSS Flex on the navigation nav. -->
+        <nav>
+            <a href="https://www.linkedin.com/in/marioeduado-garciaslazar-3981ba122/" target="_blank">Linkedin</a>
+            <a href=" https://byui.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="#home" target="_blank">Final Proyect</a>
+        </nav>
+    </header>
+
+<!-- The main element has a limited width and is centered on the screen horizontally. -->
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="myImgContainer">
+                <p>
+                    My name is Mario Eduardo Garcia Salazar I was born in Tlaxcala Mexico I currently live with my family in Hidalgo state. I am currently studying programing online and I wish to find a part-time job so that I can develop and obtain better programming skills. I love to practice guitar and create ideas for a science fiction story that I wish one day if possible, bring to life.
+                </p>
+                <img src="images/me.jpg" alt="Me and my cat">
+            </div>
+            <h3>Hidalgo, Mexico</h3>
+            <div class="flagImgContainer">
+                <div class="onlyFlagContainer">
+                    <img src="images/bandera.png" alt="Mexico flag">
+                </div>
+                <p>
+                    All Mexican commemorations are celebrated in the state, highlighting the Anniversary of Mexican Independence; during which the Cry of Sorrows is celebrated on September 15 and a parade on September 16. During the Anniversary of the Mexican Revolution on November 20, a sports parade is held; and on March 21, a parade is held that commemorates the arrival of spring with students of various educational levels, events held in most municipalities.
+                </p>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <ul class="ulLinks">
+                <li><a href="#dev">Dev to Community</a></li>
+                <li><a href="#magazine">Smashing Magazine</a></li>
+                <li><a href="#tricks">CSS Tricks</a></li>
+              </ul>
+        </section>
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            Mario Eduardo Garcia Salazar, Hidalgo Mexico
+        </p>
+        <p id="lastModified">
+        </p>
+    </footer>
 </body>
 </html>
