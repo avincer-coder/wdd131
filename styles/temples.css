@@ -1,0 +1,56 @@
+/* tipo de letra h1 
+    font-family: "Libre Baskerville", serif; 
+
+tipo de letra h2
+    font-family: "Libre Baskerville", serif;
+
+tipo de letra p
+    font-family: "EB Garamond", serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburguerMenu{
+    background-color: black;
+    border: 1px solid red;
+    transform: translate(0, -170px);
+}
+.barsText{
+    display: flex;
+    justify-content: space-between;
+}
+.closeNav{
+    color: white;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    margin-top: -100px;
+    max-width: 1024px;
+}
+nav li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+nav p{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.homePictures{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 6px;
+    justify-items: center;
+}
+.homePictures img{
+    width: 280px;
+    height: 220px;
+}

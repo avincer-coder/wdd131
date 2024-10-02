@@ -1,0 +1,35 @@
+@media(min-width: 850px){
+    #btnHamburger{
+        display: none;
+    }
+    .hamburguerMenu{
+        transform: none;
+    }
+    .hamburgerUl{
+        flex-direction: row;
+    }
+    main{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    #closeNavClick{
+        display: none;
+    }
+    nav ul{
+        width: 600px;
+        display: flex;        
+        justify-content: space-around;
+    }
+    nav{
+        display: flex;
+        align-content: center;
+        transform: none;
+    }
+
+}
