@@ -87,7 +87,11 @@ nav a:hover{
     border-radius: 8px;
 }
 
-h2, h3{
+h2{
+    text-align: center;
+    padding: 20px 0;
+}
+h3{
     text-align: center;
     padding: 20px 0;
 }
