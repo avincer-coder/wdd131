@@ -14,8 +14,11 @@ tipo de letra p
 }
 .hamburguerMenu{
     background-color: black;
-    border: 1px solid red;
-    transform: translate(0, -170px);
+    /* border: 1px solid red; */
+    position: absolute;
+    top: -200px;
+    width: 100%;
+    padding-top: 12px;
 }
 .barsText{
     display: flex;
@@ -23,6 +26,19 @@ tipo de letra p
 }
 .closeNav{
     color: white;
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 8px;
+}
+.closeNav:hover{
+    cursor: pointer;
+    color: red;
+    border-color: red;
 }
 ul{
     display: flex;
@@ -31,13 +47,16 @@ ul{
     align-items: center;
 }
 main{
-    margin-top: -100px;
     max-width: 1024px;
+
+    /* margin auto es para centrar calculando el margin de los lados automaticamente */
+    margin: 0 auto;
 }
 nav li{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center;   
+    margin-bottom: 12px;
 }
 nav p{
     position: absolute;
@@ -53,4 +72,32 @@ nav p{
 .homePictures img{
     width: 280px;
     height: 220px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: rgb(201, 171, 0);
+    color: black;
+    border-radius: 8px;
+}
+
+h2{
+    text-align: center;
+    padding: 20px 0;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header{
+    background-color: rgb(6, 139, 248);
 }

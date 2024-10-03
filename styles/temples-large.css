@@ -2,8 +2,12 @@
     #btnHamburger{
         display: none;
     }
+
+    /* el right funciona porque viene del otro css donde ya exsiste la propiedad position */
     .hamburguerMenu{
-        transform: none;
+        width: 60%;
+        right: 0;
+        top: 0;
     }
     .hamburgerUl{
         flex-direction: row;
