@@ -88,30 +88,27 @@ const temples = [
   ];
 
 console.log(temples[0])
-
-
-figureLable = document.createElement('figure')
 sectionHomePictures = document.getElementsByClassName("homePictures")[0]
 
+temples.forEach(function(temple, indice){
+    figureLable = document.createElement('figure')
+    
 
-imgLable = document.createElement('img')
-imgLable.src = temples[0].imageUrl
-imgLable.alt = temples[0].templeName
+    imgLable = document.createElement('img')
+    imgLable.src = temples[indice].imageUrl
+    imgLable.alt = temples[indice].templeName
 
 pLabelLocation = document.createElement('p')
-pLabelLocation.textContent = temples[0].location
+pLabelLocation.textContent = temples[indice].location
 
 pLabelDedicated = document.createElement('p')
-pLabelDedicated.textContent = temples[0].dedicated
+pLabelDedicated.textContent = temples[indice].dedicated
 
 pLabelArea = document.createElement('p')
-pLabelArea.textContent = temples[0].area
+pLabelArea.textContent = temples[indice].area
 
 figcaptionLable = document.createElement('figcaption')
-figcaptionLable.textContent = temples[0].templeName
-
-console.log(figureLable)
-console.log(sectionHomePictures)
+figcaptionLable.textContent = temples[indice].templeName
 
 sectionHomePictures.appendChild(figureLable)
 figureLable.appendChild(imgLable)
@@ -119,6 +116,9 @@ figureLable.appendChild(figcaptionLable)
 figureLable.appendChild(pLabelLocation)
 figureLable.appendChild(pLabelDedicated)
 figureLable.appendChild(pLabelArea)
+})
+
+
 
 
 
