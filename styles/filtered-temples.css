@@ -1,0 +1,107 @@
+/* tipo de letra h1 
+    font-family: "Libre Baskerville", serif; 
+
+tipo de letra h2
+    font-family: "Libre Baskerville", serif;
+
+tipo de letra p
+    font-family: "EB Garamond", serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburguerMenu{
+    background-color: black;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: -200px;
+    width: 100%;
+    padding-top: 12px;
+}
+.barsText{
+    display: flex;
+    justify-content: space-between;
+}
+.closeNav{
+    color: white;
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 8px;
+}
+.closeNav:hover{
+    cursor: pointer;
+    color: red;
+    border-color: red;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    max-width: 1024px;
+
+    /* margin auto es para centrar calculando el margin de los lados automaticamente */
+    margin: 0 auto;
+}
+nav li{
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    margin-bottom: 12px;
+}
+nav p{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.homePictures{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 6px;
+    justify-items: center;
+}
+.homePictures img{
+    width: 280px;
+    height: 220px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover{
+    background-color: rgb(201, 171, 0);
+    color: black;
+    border-radius: 8px;
+}
+
+h2{
+    text-align: center;
+    padding: 20px 0;
+}
+h3{
+    text-align: center;
+    padding: 20px 0;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header{
+    background-color: rgb(6, 139, 248);
+}
