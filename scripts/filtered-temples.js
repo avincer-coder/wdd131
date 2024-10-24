@@ -19,6 +19,7 @@ btnOld.addEventListener("click", function(){
     return oldDate<1900
   })
   console.log(oldDateFilter)
+  cardImageCreation(oldDateFilter)
   
 })
 btnNew.addEventListener("click", function(){
@@ -149,28 +150,29 @@ const temples = [
     // Add more temple objects here...
   ];
 
-console.log(temples[0])
+function cardImageCreation(templeArray){
+  console.log("esta funcion es de prueba")
 sectionHomePictures = document.getElementsByClassName("homePictures")[0]
 
-temples.forEach(function(temple, indice){
+templeArray.forEach(function(temple, indice){
     figureLable = document.createElement('figure')
     
 
     imgLable = document.createElement('img')
-    imgLable.src = temples[indice].imageUrl
-    imgLable.alt = temples[indice].templeName
+    imgLable.src = templeArray[indice].imageUrl
+    imgLable.alt = templeArray[indice].templeName
 
 pLabelLocation = document.createElement('p')
-pLabelLocation.textContent = temples[indice].location
+pLabelLocation.textContent = templeArray[indice].location
 
 pLabelDedicated = document.createElement('p')
-pLabelDedicated.textContent = temples[indice].dedicated
+pLabelDedicated.textContent = templeArray[indice].dedicated
 
 pLabelArea = document.createElement('p')
-pLabelArea.textContent = temples[indice].area
+pLabelArea.textContent = templeArray[indice].area
 
 figcaptionLable = document.createElement('figcaption')
-figcaptionLable.textContent = temples[indice].templeName
+figcaptionLable.textContent = templeArray[indice].templeName
 
 sectionHomePictures.appendChild(figureLable)
 figureLable.appendChild(imgLable)
@@ -181,6 +183,15 @@ figureLable.appendChild(pLabelArea)
 })
 
 
+
+
+
+
+
+
+}
+
+cardImageCreation(temples)
 
 
 
