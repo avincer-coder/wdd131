@@ -4,10 +4,45 @@ deployNav = document.getElementById("navMenu")
 clickCloseNav = document.getElementById("closeNavClick")
 mainTag = document.getElementsByTagName("main")[0]
 console.log(clickCloseNav)
+btnHome = document.getElementById("btnHome")
+btnOld = document.getElementById("btnOld")
+btnNew = document.getElementById("btnNew")
+btnLarge = document.getElementById("btnLarge")
+btnSmall = document.getElementById("btnSmall")
+
+btnHome.addEventListener("click", function(){
+  console.log("Mostrar todas las imagenes")
+})
+btnOld.addEventListener("click", function(){
+  oldDateFilter = temples.filter(old=>{
+    const oldDate = parseInt(old.dedicated.split(",")[0])
+    return oldDate<1900
+  })
+  console.log(oldDateFilter)
+  
+})
+btnNew.addEventListener("click", function(){
+    newDateFilter = temples.filter(newDate=>{
+    const newFilteredDate = parseInt(newDate.dedicated.split(",")[0])
+    return newFilteredDate>2000
+  })
+  console.log(newDateFilter)
+})
+
+btnLarge.addEventListener("click", function(){
+  const templesFilteredLarge = temples.filter(date=>date.area>=90000)
+  console.log("btn large")
+  console.log(templesFilteredLarge)
+})
+btnSmall.addEventListener("click", function(){
+  const templesFilteredSmall =  temples.filter(date=>date.area<=10000)
+  console.log("btn small")
+  console.log(templesFilteredSmall)
+})
 
 btnNav.addEventListener("click", function(){
-    deployNav.style.top = "0" 
-    mainTag.style.marginTop = "70px"
+  deployNav.style.top = "0" 
+  mainTag.style.marginTop = "70px"
 })
 
 clickCloseNav.addEventListener("click", function(){
@@ -84,6 +119,33 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+    {
+      templeName: "Charlotte North Carolina Temple",
+      location: "Weddington, North Carolina",
+      dedicated: "2023, April, 2",
+      area: 30000,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/charlotte-north-carolina-temple/charlotte-north-carolina-temple-38371.jpg"
+    },
+    {
+      templeName: "Mexico City Mexico",
+      location: "Mexico City, Mexico",
+      dedicated: "1983, December, 2",
+      area: 116642,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+    {
+      templeName: "Mexico City Mexico",
+      location: "Mexico City, Mexico",
+      dedicated: "1983, December, 2",
+      area: 116642,
+      imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+
+
+
     // Add more temple objects here...
   ];
 
