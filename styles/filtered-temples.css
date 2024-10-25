@@ -106,3 +106,11 @@ footer{
 header{
     background-color: rgb(6, 139, 248);
 }
+figure{
+    text-align: center;
+}
+figcaption{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}

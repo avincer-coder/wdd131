@@ -129,20 +129,20 @@ const temples = [
       "https://churchofjesuschristtemples.org/assets/img/temples/charlotte-north-carolina-temple/charlotte-north-carolina-temple-38371.jpg"
     },
     {
-      templeName: "Mexico City Mexico",
-      location: "Mexico City, Mexico",
-      dedicated: "1983, December, 2",
-      area: 116642,
+      templeName: "Bern Switzerland Temple",
+      location: "Switzerland",
+      dedicated: "1955, September, 11-15",
+      area: 35546,
       imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/bern-switzerland-temple/bern-switzerland-temple-12662-main.jpg"
     },
     {
-      templeName: "Mexico City Mexico",
-      location: "Mexico City, Mexico",
-      dedicated: "1983, December, 2",
-      area: 116642,
+      templeName: "Calgary Alberta Temple",
+      location: "Canada",
+      dedicated: "2012, Octubre, 28",
+      area: 33000,
       imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/calgary-alberta-temple/calgary-alberta-temple-13199-main.jpg"
     },
 
 
@@ -212,23 +212,24 @@ function cardImageCreation(templeArray) {
     observer.observe(imgLable);  // Observa la imagen
 
     const pLabelLocation = document.createElement('p');
-    pLabelLocation.textContent = temple.location;
+    pLabelLocation.textContent = "Location: " + temple.location;
 
     const pLabelDedicated = document.createElement('p');
-    pLabelDedicated.textContent = temple.dedicated;
+    pLabelDedicated.textContent = "Dedicated: " + temple.dedicated;
 
     const pLabelArea = document.createElement('p');
-    pLabelArea.textContent = temple.area;
+    pLabelArea.textContent = "Size: " + temple.area + " sq ft";
 
     const figcaptionLable = document.createElement('figcaption');
     figcaptionLable.textContent = temple.templeName;
 
-    figureLable.appendChild(imgLable);
+    
     figureLable.appendChild(figcaptionLable);
     figureLable.appendChild(pLabelLocation);
     figureLable.appendChild(pLabelDedicated);
     figureLable.appendChild(pLabelArea);
     sectionHomePictures.appendChild(figureLable);
+    figureLable.appendChild(imgLable);
   });
 }
 
