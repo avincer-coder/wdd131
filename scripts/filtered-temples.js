@@ -11,34 +11,34 @@ btnLarge = document.getElementById("btnLarge")
 btnSmall = document.getElementById("btnSmall")
 
 btnHome.addEventListener("click", function(){
-  console.log("Mostrar todas las imagenes")
+  cardImageCreation(temples)
 })
+
 btnOld.addEventListener("click", function(){
   oldDateFilter = temples.filter(old=>{
     const oldDate = parseInt(old.dedicated.split(",")[0])
     return oldDate<1900
   })
-  console.log(oldDateFilter)
   cardImageCreation(oldDateFilter)
-  
 })
+
 btnNew.addEventListener("click", function(){
     newDateFilter = temples.filter(newDate=>{
     const newFilteredDate = parseInt(newDate.dedicated.split(",")[0])
     return newFilteredDate>2000
   })
   console.log(newDateFilter)
+  cardImageCreation(newDateFilter)
 })
 
 btnLarge.addEventListener("click", function(){
   const templesFilteredLarge = temples.filter(date=>date.area>=90000)
-  console.log("btn large")
-  console.log(templesFilteredLarge)
+  cardImageCreation(templesFilteredLarge)
 })
+
 btnSmall.addEventListener("click", function(){
   const templesFilteredSmall =  temples.filter(date=>date.area<=10000)
-  console.log("btn small")
-  console.log(templesFilteredSmall)
+  cardImageCreation(templesFilteredSmall)
 })
 
 btnNav.addEventListener("click", function(){
@@ -150,45 +150,86 @@ const temples = [
     // Add more temple objects here...
   ];
 
-function cardImageCreation(templeArray){
-  console.log("esta funcion es de prueba")
-sectionHomePictures = document.getElementsByClassName("homePictures")[0]
+// function cardImageCreation(templeArray){
+  
+//   console.log("esta funcion es de prueba")
+// sectionHomePictures = document.getElementsByClassName("homePictures")[0]
+// sectionHomePictures.innerHTML = ""
 
-templeArray.forEach(function(temple, indice){
-    figureLable = document.createElement('figure')
-    
+// templeArray.forEach(function(temple, indice){
+  
 
-    imgLable = document.createElement('img')
-    imgLable.src = templeArray[indice].imageUrl
-    imgLable.alt = templeArray[indice].templeName
 
-pLabelLocation = document.createElement('p')
-pLabelLocation.textContent = templeArray[indice].location
+//   figureLable = document.createElement('figure')
+//   imgLable = document.createElement('img')
+//   imgLable.src = templeArray[indice].imageUrl
+//   imgLable.alt = templeArray[indice].templeName
+//   imgLable.loading = "lazy"
 
-pLabelDedicated = document.createElement('p')
-pLabelDedicated.textContent = templeArray[indice].dedicated
+// pLabelLocation = document.createElement('p')
+// pLabelLocation.textContent = templeArray[indice].location
 
-pLabelArea = document.createElement('p')
-pLabelArea.textContent = templeArray[indice].area
+// pLabelDedicated = document.createElement('p')
+// pLabelDedicated.textContent = templeArray[indice].dedicated
 
-figcaptionLable = document.createElement('figcaption')
-figcaptionLable.textContent = templeArray[indice].templeName
+// pLabelArea = document.createElement('p')
+// pLabelArea.textContent = templeArray[indice].area
 
-sectionHomePictures.appendChild(figureLable)
-figureLable.appendChild(imgLable)
-figureLable.appendChild(figcaptionLable)
-figureLable.appendChild(pLabelLocation)
-figureLable.appendChild(pLabelDedicated)
-figureLable.appendChild(pLabelArea)
-})
+// figcaptionLable = document.createElement('figcaption')
+// figcaptionLable.textContent = templeArray[indice].templeName
 
 
 
+// sectionHomePictures.appendChild(figureLable)
+// figureLable.appendChild(imgLable)
+// figureLable.appendChild(figcaptionLable)
+// figureLable.appendChild(pLabelLocation)
+// figureLable.appendChild(pLabelDedicated)
+// figureLable.appendChild(pLabelArea)
+// })
+// }
 
+function cardImageCreation(templeArray) {
+  sectionHomePictures = document.getElementsByClassName("homePictures")[0];
+  sectionHomePictures.innerHTML = "";
 
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.getAttribute("data-src");
+        observer.unobserve(img);
+      }
+    });
+  }, { threshold: 0.1 });
 
+  templeArray.forEach(temple => {
+    const figureLable = document.createElement('figure');
+    const imgLable = document.createElement('img');
+    imgLable.setAttribute("data-src", temple.imageUrl);  // data-src en lugar de src
+    imgLable.alt = temple.templeName;
 
+    observer.observe(imgLable);  // Observa la imagen
 
+    const pLabelLocation = document.createElement('p');
+    pLabelLocation.textContent = temple.location;
+
+    const pLabelDedicated = document.createElement('p');
+    pLabelDedicated.textContent = temple.dedicated;
+
+    const pLabelArea = document.createElement('p');
+    pLabelArea.textContent = temple.area;
+
+    const figcaptionLable = document.createElement('figcaption');
+    figcaptionLable.textContent = temple.templeName;
+
+    figureLable.appendChild(imgLable);
+    figureLable.appendChild(figcaptionLable);
+    figureLable.appendChild(pLabelLocation);
+    figureLable.appendChild(pLabelDedicated);
+    figureLable.appendChild(pLabelArea);
+    sectionHomePictures.appendChild(figureLable);
+  });
 }
 
 cardImageCreation(temples)
