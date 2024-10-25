@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        name="description" 
+        content="This is a rating form for a web page ">
+    <meta name="author" content="Mario Eduardo Garcia Salazar">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/form.css">
+    <script src="../scripts/form.js" defer></script>
+    <title>Rating form page</title>
+</head>
+<body>
+        <form>
+          <!-- Product Name Dropdown -->
+          <label for="product">Product Name:</label>
+          <select id="product" name="product">
+              <option value="" disabled selected>Choose a Product...</option>
+              <option value="product1">Product 1</option>
+              <option value="product2">Product 2</option>
+              <option value="product3">Product 3</option>
+          </select>
+          <br><br>
+  
+          <!-- Overall Rating -->
+          <label>Overall Rating:</label><br>
+          <input type="radio" id="rating1" name="rating" value="1">
+          <label for="rating1">1</label>
+  
+          <input type="radio" id="rating2" name="rating" value="2">
+          <label for="rating2">2</label>
+  
+          <input type="radio" id="rating3" name="rating" value="3">
+          <label for="rating3">3</label>
+  
+          <input type="radio" id="rating4" name="rating" value="4">
+          <label for="rating4">4</label>
+  
+          <input type="radio" id="rating5" name="rating" value="5">
+          <label for="rating5">5</label>
+          <br><br>
+  
+          <!-- Date of Installation -->
+          <label for="installation-date">Date of Installation:</label>
+          <input type="date" id="installation-date" name="installation-date">
+          <br><br>
+  
+          <!-- Features Found Useful -->
+          <label>Which features did you find useful in the product? (Check all that apply):</label><br>
+          <input type="checkbox" id="durability" name="feature" value="durability">
+          <label for="durability">Durability</label><br>
+  
+          <input type="checkbox" id="ease-of-use" name="feature" value="ease-of-use">
+          <label for="ease-of-use">Ease of Use</label><br>
+  
+          <input type="checkbox" id="performance" name="feature" value="performance">
+          <label for="performance">Performance</label><br>
+  
+          <input type="checkbox" id="design" name="feature" value="design">
+          <label for="design">Design</label><br><br>
+  
+          <!-- Written Review -->
+          <label for="review">Written Review (Optional):</label><br>
+          <textarea id="review" name="review" rows="4" cols="50" placeholder="Write your review..."></textarea>
+          <br><br>
+  
+          <!-- Your Name -->
+          <label for="name">Your Name (Optional):</label>
+          <input type="text" id="name" name="name" placeholder="Your Name">
+          <br><br>
+  
+          <!-- Submit Button -->
+          <button  type="submit">Post Review</button>
+        </form> 
+
+
+
+
+
+</body>
+</html>
