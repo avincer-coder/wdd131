@@ -1,9 +1,9 @@
 // Definir variables
 let area = "Área Ejemplo";
 let population = 1000000;
-let capital = "Ciudad Ejemplo";
+let capital = "Mante";
 let languages = ["Español", "Inglés"];
-let currency = "Moneda Ejemplo";
+let currency = "pesos";
 let timeZone = "GMT-5";
 let callingCode = "+57";
 let internetTLD = ".co";
@@ -28,25 +28,64 @@ if ((temperature <= 10 && wind > 4.8) || (temperature <= 50 && wind > 3)) {
   windChill = "N/A";
 }
 
-const sectionData = document.querySelector(".section_data");
-sectionData.innerHTML += `
-  <p><strong>Área:</strong> ${area}</p>
-  <p><strong>Población:</strong> ${population}</p>
-  <p><strong>Capital:</strong> ${capital}</p>
-  <p><strong>Idiomas:</strong> ${languages.join(", ")}</p>
-  <p><strong>Moneda:</strong> ${currency}</p>
-  <p><strong>Zona Horaria:</strong> ${timeZone}</p>
-  <p><strong>Código de Llamada:</strong> ${callingCode}</p>
-  <p><strong>Dominio de Internet:</strong> ${internetTLD}</p>
-`;
+// const sectionData = document.querySelector(".section_data");
+// sectionData.innerHTML += `
+//   <p><strong>Área:</strong> ${area}</p>
+//   <p><strong>Población:</strong> ${population}</p>
+//   <p><strong>Capital:</strong> ${capital}</p>
+//   <p><strong>Idiomas:</strong> ${languages.join(", ")}</p>
+//   <p><strong>Moneda:</strong> ${currency}</p>
+//   <p><strong>Zona Horaria:</strong> ${timeZone}</p>
+//   <p><strong>Código de Llamada:</strong> ${callingCode}</p>
+//   <p><strong>Dominio de Internet:</strong> ${internetTLD}</p>
+// `;
 
 
-const sectionWeather = document.querySelector(".section_weather");
-  sectionWeather.innerHTML += `
-    <p><strong>Temperatura:</strong> ${temperature}°${temperature <= 10 ? "C" : "F"}</p>
-    <p><strong>Condiciones:</strong> ${conditions}</p>
-    <p><strong>Viento:</strong> ${wind} ${temperature <= 10 ? "km/h" : "mph"}</p>
-    <p><strong>Sensación Térmica:</strong> ${windChill}</p>
+const sectionWeatherLeft = document.querySelector(".section_weather_left");
+const sectionWeatherRight = document.querySelector(".section_weather_right");
+
+
+  sectionWeatherLeft.innerHTML += `
+    <p><strong>Temp:</strong></p>
+    <p><strong>Conditions:</strong></p>
+    <p><strong>Wind: </strong></p>
+    <p><strong>Wind Chill: </strong></p>
+  `;
+
+  sectionWeatherRight.innerHTML += `
+    <p> ${temperature}°${temperature <= 10 ? "C" : "F"}</p>
+    <p>${conditions}</p>
+    <p>${wind} ${temperature <= 10 ? "km/h" : "mph"}</p>
+    <p> ${windChill}</p>
   `;
 
 console.log("Sensación Térmica:", windChill);
+
+
+
+// Seleccionar los contenedores
+const sectionDataLeft = document.querySelector(".section_data_left");
+const sectionDataRight = document.querySelector(".section_data_right");
+
+// Insertar información en la sección izquierda
+sectionDataLeft.innerHTML += `
+    <p><strong>Area:</strong> </p>
+    <p><strong>Población:</strong></p>
+    <p><strong>Capital:</strong> </p>
+    <p><strong>Idiomas:</strong></p>
+    <p><strong>Moneda:</strong> </p>
+    <p><strong>Zona Horaria:</strong> </p>
+    <p><strong>Calling code:</strong></p>
+    <p><strong>Internet TLD: </strong></p>
+`;
+
+sectionDataRight.innerHTML += `
+    <p>${area} </p>
+    <p>${population} </p>
+    <p>${capital}</p>
+    <p>${languages}</p>
+    <p>${currency}</p>
+    <p>${timeZone}</p>
+    <p>${callingCode}</p>
+    <p>${internetTLD}</p>
+`;

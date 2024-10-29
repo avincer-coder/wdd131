@@ -1,17 +1,16 @@
 :root {
-    /* Variables de color */
     --color-black: black;
+    --color-black-trasnparent-nine:rgba(0, 0, 0, 0.9);
+    --color-black-transparent: rgba(0, 0, 0, 0.5); /* Negro con 50% de transparencia */
     --color-white: white;
     --color-red: red;
     --color-green: green;
-    --color-yellowgreen: yellowgreen;
+    --color-yellow-green: yellowgreen; /* Cambiado para mayor claridad */
 
-    /* Variables de espacio */
     --padding-header: 15px 0;
     --padding-footer: 10px 0;
     --margin-main-bottom: 150px;
 
-    /* Variables de ancho */
     --width-full: 100%;
     --border-width: 1px;
 }
@@ -31,16 +30,7 @@ header {
 }
 
 main {
-    border: var(--border-width) solid var(--color-black);
     margin-bottom: var(--margin-main-bottom);
-}
-
-.section_data {
-    border: var(--border-width) solid var(--color-red);
-}
-
-.section_weather {
-    border: var(--border-width) solid var(--color-green);
 }
 
 footer {
@@ -60,8 +50,6 @@ footer p {
 }
 
 .hero-image {
-    border: var(--border-width) solid var(--color-yellowgreen);
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/casas.webp"); */
     width: var(--width-full);
     background-position: center;
     background-repeat: no-repeat;
@@ -78,18 +66,79 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de transparencia */
 }
 
 .section_weather h2::after {
     content: url("../images/weather.svg");
-    display: block; /* Hacer que ocupe una línea completa debajo del texto */
+    display: block;
     width: 50px;
     height: 50px;
-    margin-left: 10px; /* Espacio entre el texto y el icono */
+    margin-left: 10px;
 }
 
-@media (max-width: 768px) {
-    .section_weather h2::after {
+.section_data_content {
+    display: flex;
+}
 
+.section_data_left {
+    text-align: end;
+}
+
+.section_weather_content {
+    display: flex;
+}
+
+.section_weather_left {
+    text-align: end;
+    width: 60%;
+}
+
+.section_weather {
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .section_weather h2::after {
+        content: url("../images/dayNight.svg");
+        display: inline-block;
+    }
+    
+    .section_data,
+    .section_weather {
+        width: 200px;
+        position: absolute;
+    }
+    
+    .hero-image {
+        position: relative;
+    }
+    
+    .section_data {
+        top: 20%;
+        left: 30px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .section_weather {
+        margin-top: 50px;
+        bottom: 0px;
+        right: 30px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    h2 {
+        background-color: var(--color-black-trasnparent-nine);
+        color: white;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section_weather_content {
+        width: 100%;
     }
 }
