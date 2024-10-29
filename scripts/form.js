@@ -40,7 +40,7 @@ products.forEach(product=>{
 
 
 form.addEventListener("submit", function(event){
-  event.preventDefault();
+  // event.preventDefault();
   if (localStorage.getItem("contador") === null) {
     // Si no existe, inicialízala en 1
     localStorage.setItem("contador", 1);
@@ -76,5 +76,5 @@ console.log("Contador:", localStorage.getItem("contador"));
 //     localStorage.setItem("checkbox", inputCheckboxFeature)
 //     console.log(inputCheckboxFeature)
 
-    window.location.href = "review.html"
+    // window.location.href = "review.html"
 })

@@ -23,15 +23,15 @@ pTagDate = document.createElement("p");
 pTagSelect = document.createElement("p");
 pTagRating = document.createElement("p");
 pTagCheckbox = document.createElement("p");
+pTagContador = document.createElement("p")
 
-
-pTagName.textContent = inputNameValue + " Nombre del usuario 12"
-pTagReview.textContent = inputReviewValue + " Review del Usuario"
-pTagDate.textContent = inputDateValue + " Date"
-pTagSelect.textContent = inputSelectValue + " Product"
-pTagRating.textContent = inputRatingValue + " Rate"
-pTagCheckbox.textContent = inputCheckboxValue + " Usefull list"
-
+pTagName.textContent =  " Nombre del usuario: " + inputNameValue
+pTagReview.textContent = "Review del Usuario: " + inputReviewValue
+pTagDate.textContent = "Date: " + inputDateValue
+pTagSelect.textContent = "Product: " + inputSelectValue
+pTagRating.textContent = "Rate: " + inputRatingValue 
+pTagCheckbox.textContent = "Usefull list: " + inputCheckboxValue
+pTagContador.textContent = " Number of views: " + getContador
 
 mainTag.appendChild(pTagName);
 mainTag.appendChild(pTagReview);
@@ -39,3 +39,4 @@ mainTag.appendChild(pTagDate);
 mainTag.appendChild(pTagSelect);
 mainTag.appendChild(pTagRating);
 mainTag.appendChild(pTagCheckbox);
+mainTag.appendChild(pTagContador)

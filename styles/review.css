@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+    color: black;
+    font-family: 'EB Garamond', serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Estilos para el contenedor main */
+main {
+    background-color: rgb(3, 85, 151);
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-bottom: 130px;
+}
+
+/* Estilos para los párrafos dentro de main */
+main p {
+    color: white;
+    font-size: 1.1em;
+    margin: 0px 0;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer span, footer p {
+    display: block;
+    margin: 0;
+}

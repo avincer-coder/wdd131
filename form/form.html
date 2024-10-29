@@ -12,13 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/form.css">
     <script src="../scripts/form.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
     <title>Rating form page</title>
 </head>
 <body>
+    <header class="header">
+        <h1>Review</h1>
+    </header>
         <form method="get" action="review.html"> 
           <!-- Product Name Dropdown -->
           <label for="product">Product Name:</label>
-          <select id="product" name="product">
+          <select id="product" name="product" required>
               <option value="" disabled selected>Choose a Product...</option>
           </select>
           <br><br>
@@ -43,7 +47,7 @@
   
           <!-- Date of Installation -->
           <label for="installation-date">Date of Installation:</label>
-          <input type="date" id="installation-date" name="installation-date">
+          <input type="date" id="installation-date" name="installation-date" required>
           <br><br>
   
           <!-- Features Found Useful -->
@@ -76,7 +80,13 @@
 
 
 
-
+<footer>
+    <span id="currentyear"></span>
+    Mario Eduardo Garcia Salazar, Hidalgo Mexico
+</p>
+<p id="lastModified">
+</p>
+</footer>
 
 </body>
 </html>
